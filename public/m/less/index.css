@@ -122,3 +122,67 @@ img {
 #sport > .sport-content > ul > li > a > p {
   font-size: .14rem;
 }
+#women {
+  padding: .1rem;
+}
+#women .women-title {
+  width: 100%;
+}
+#women .women-title > a {
+  display: block;
+}
+#women .women-title > a > img {
+  width: 100%;
+}
+#women .women-content > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#women .women-content > ul > li {
+  width: 50%;
+}
+#women .women-content > ul > li > a {
+  margin-top: .1rem;
+  padding-bottom: .1rem;
+  border: .01rem solid #ccc;
+  display: block;
+  text-align: center;
+}
+#women .women-content > ul > li > a > img {
+  width: 100%;
+}
+#women .women-content > ul > li > a > p {
+  font-size: .14rem;
+}
+#man {
+  padding: .1rem;
+}
+#man .man-title {
+  width: 100%;
+}
+#man .man-title > a {
+  display: block;
+}
+#man .man-title > a > img {
+  width: 100%;
+}
+#man .man-content > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#man .man-content > ul > li {
+  width: 50%;
+}
+#man .man-content > ul > li > a {
+  margin-top: .1rem;
+  padding-bottom: .1rem;
+  border: .01rem solid #ccc;
+  display: block;
+  text-align: center;
+}
+#man .man-content > ul > li > a > img {
+  width: 100%;
+}
+#man .man-content > ul > li > a > p {
+  font-size: .14rem;
+}

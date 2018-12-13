@@ -82,3 +82,54 @@ body {
 #footer ul li a span {
   display: block;
 }
+body {
+  background-color: #ccc;
+}
+#main {
+  display: flex;
+}
+#main .category-left {
+  width: 0.8rem;
+  position: relative;
+}
+#main .category-left ul {
+  min-height: 5.78rem;
+}
+#main .category-left ul li a {
+  display: block;
+  color: #666;
+  height: .45rem;
+  line-height: .45rem;
+  text-align: center;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  font-size: .14rem;
+}
+#main .category-left ul li.active a {
+  background-color: #ccc;
+  color: #069;
+}
+#main .category-right {
+  width: 2.95rem;
+  position: relative;
+}
+#main .category-right ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: .1rem;
+  min-height: 5.78rem;
+}
+#main .category-right ul li {
+  width: 33.33%;
+}
+#main .category-right ul li a {
+  display: block;
+  background-color: #fff;
+}
+#main .category-right ul li a img {
+  width: 100%;
+}
+#main .category-right ul li a p {
+  text-align: center;
+}
