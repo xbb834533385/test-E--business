@@ -1,0 +1,124 @@
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+img {
+  vertical-align: middle;
+}
+#header {
+  display: flex;
+  background-color: #069;
+  height: .45rem;
+  padding: 0 .45rem;
+  position: relative;
+  color: #fff;
+}
+#header > h4 {
+  width: 2.85rem;
+  line-height: .45rem;
+  text-align: center;
+  margin: 0;
+  font-weight: normal;
+}
+#header > a.fa-search {
+  width: .45rem;
+  height: .45rem;
+  position: absolute;
+  line-height: .45rem;
+  text-align: center;
+  right: 0;
+  top: 0;
+  color: #fff;
+}
+#nav {
+  padding: .1rem;
+}
+#nav > ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#nav > ul > li {
+  width: 33.33%;
+}
+#nav > ul > li > a {
+  display: block;
+}
+#nav > ul > li > a > img {
+  width: 100%;
+}
+#banner {
+  padding: 0 .1rem;
+  display: flex;
+}
+#banner > .banner-left {
+  flex: 2;
+  height: 2.4rem;
+}
+#banner > .banner-left > a {
+  height: 1.2rem;
+  font-size: 0;
+  display: block;
+}
+#banner > .banner-left > a > img {
+  width: 50%;
+  height: 1.2rem;
+}
+#banner > .banner-right {
+  width: 33.33%;
+  flex: 1;
+}
+#banner > .banner-right > a {
+  display: block;
+}
+#banner > .banner-right > a > img {
+  width: 100%;
+  height: 2.4rem;
+}
+#brand {
+  padding: .1rem;
+}
+#brand > .brand-title > img {
+  width: 100%;
+}
+#brand > .brand-content > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#brand > .brand-content > ul li {
+  width: 25%;
+}
+#brand > .brand-content > ul li > a {
+  display: block;
+}
+#brand > .brand-content > ul li > a > img {
+  width: 100%;
+}
+#sport {
+  padding: 0 .1rem;
+}
+#sport > .sport-title > img {
+  width: 100%;
+}
+#sport > .sport-content > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#sport > .sport-content > ul > li {
+  width: 50%;
+}
+#sport > .sport-content > ul > li > a {
+  margin-top: .1rem;
+  padding-bottom: .1rem;
+  border: .01rem solid #ccc;
+  display: block;
+  text-align: center;
+}
+#sport > .sport-content > ul > li > a > img {
+  width: 100%;
+}
+#sport > .sport-content > ul > li > a > p {
+  font-size: .14rem;
+}
