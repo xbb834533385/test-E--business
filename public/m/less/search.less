@@ -1,0 +1,40 @@
+@import 'base.less';
+
+body {
+    background-color: #fff;
+}
+#main {
+    
+    form {
+        padding: .1rem;
+        display: flex;
+        height: .54rem;
+        input {
+            margin: 0;
+            background-color: #fff;
+            border: 1px solid @main-color;
+            border-radius: 6px 0 0 6px;
+            text-align: left;
+            font-size: .14rem;
+            flex: 1;
+        }
+        .btn-search {
+            // border: none;
+            background-color: @main-color;
+            border-color: @main-color;
+            border-radius: 0 6px 6px 0;
+            width: 0.6rem;
+            height: 0.34rem;
+        }
+    }
+    .history-search {
+        .mui-card-header {
+            span {
+                font-size: .14rem;
+            }
+            a {
+                color: #666;
+            }
+        }
+    }
+}
