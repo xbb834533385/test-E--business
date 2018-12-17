@@ -1,0 +1,81 @@
+@import 'base.less';
+
+body {
+    background-color: #fff;
+}
+#main {
+    
+    form {
+        padding: .1rem;
+        display: flex;
+        height: .54rem;
+        input {
+            margin: 0;
+            background-color: #fff;
+            border: 1px solid @main-color;
+            border-radius: 6px 0 0 6px;
+            text-align: left;
+            font-size: .14rem;
+            flex: 1;
+        }
+        .btn-search {
+            // border: none;
+            background-color: @main-color;
+            border-color: @main-color;
+            border-radius: 0 6px 6px 0;
+            width: 0.6rem;
+            height: 0.34rem;
+        }
+    }
+    .productList {
+        .product-title {
+            background-color: #eeeeee;
+            height: 0.3rem;
+            line-height: 0.3rem;
+            text-align: center;
+            font-size: 0.14rem;
+            ul {
+                display: flex;
+                li {
+                    width: 25vw;
+                    a {
+                        display: block;
+                        color: #666;
+                    }
+                    &.active {
+                        a {
+                            color: red;
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .product-content {
+            
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    padding: 0.1rem 0.05rem;
+                    width: 50%;
+                    
+                    a {
+                        display: block;
+                        border: .01rem solid #ccc;
+                        img {
+                            width: 100%;
+                        }
+                        p {
+                            text-align: center;
+                            &:first-of-type {
+                                height: .42rem;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

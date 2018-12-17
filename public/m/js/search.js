@@ -20,7 +20,7 @@ $(function(){
         historyData.unshift(search);
         localStorage.setItem('searchHistory',JSON.stringify(historyData));
         $('.input-search').val('');
-        location = 'productlist.html?html='+search;
+        location = 'productlist.html?search='+search;
     })
 
 
@@ -55,6 +55,6 @@ $(function(){
     })
     // 给每一个li标签注册事件
     $('.mui-table-view').on('tap','.mui-table-view-cell',function(){
-        // $('.input-search').val($(this).text());
+        $('.input-search').val($(this).text().trim());
     })
 })

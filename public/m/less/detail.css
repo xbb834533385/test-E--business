@@ -85,3 +85,28 @@ body {
 #footer ul li a span {
   display: block;
 }
+#product {
+  font-size: 0.14rem;
+}
+#product .product-price span {
+  color: red;
+}
+#footer {
+  width: 100%;
+  background-color: #ccc;
+}
+#footer ul li {
+  flex: 1;
+  padding: 0.05rem;
+}
+#footer ul li button {
+  width: 100%;
+}
+#footer ul li:first-child {
+  width: 0.625rem;
+  flex: none;
+}
+#footer ul li:first-child a {
+  color: #666;
+  font-size: 0.2rem;
+}

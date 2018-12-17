@@ -7,13 +7,25 @@ li {
 img {
   vertical-align: middle;
 }
+body {
+  padding: 0.45rem 0;
+  height: 100vh;
+}
+#main {
+  height: 100%;
+  position: relative;
+}
 #header {
   display: flex;
   background-color: #069;
+  width: 100vw;
   height: .45rem;
   padding: 0 .45rem;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   color: #fff;
+  z-index: 999;
 }
 #header > h4 {
   width: 2.85rem;
@@ -22,15 +34,53 @@ img {
   margin: 0;
   font-weight: normal;
 }
-#header > a.fa-search {
+#header form {
+  width: 100%;
+  line-height: .45rem;
+}
+#header form input {
+  margin-bottom: 0;
+  background-color: #fff;
+  text-align: left;
+  color: #000;
+  font-size: 0.14rem;
+}
+#header a {
   width: .45rem;
   height: .45rem;
   position: absolute;
   line-height: .45rem;
   text-align: center;
-  right: 0;
   top: 0;
   color: #fff;
+}
+#header a.fa-arrow-left {
+  left: 0;
+}
+#header a.fa-search {
+  right: 0;
+}
+#footer {
+  height: .45rem;
+  background-color: #069;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+#footer ul {
+  display: flex;
+}
+#footer ul li {
+  width: 25vw;
+  text-align: center;
+}
+#footer ul li a {
+  padding: 0.085rem;
+  color: #fff;
+  display: block;
+}
+#footer ul li a span {
+  display: block;
 }
 #nav {
   padding: .1rem;
