@@ -35,23 +35,21 @@
                     <div class="mui-slider">
                         <div class="mui-slider-group mui-slider-loop">
                             <!--支持循环，需要重复图片节点-->
-                            <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/detail.jpg"
-                                    /></a></div>
+                            <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/detail.jpg"></a></div>
                             <div class="mui-slider-item">
-                                <a href="#"><img src="images/detail.jpg" /></a>
+                                <a href="#"><img src="images/detail.jpg"></a>
                             </div>
                             <div class="mui-slider-item">
-                                <a href="#"><img src="images/detail.jpg" /></a>
+                                <a href="#"><img src="images/detail.jpg"></a>
                             </div>
                             <div class="mui-slider-item">
-                                <a href="#"><img src="images/detail.jpg" /></a>
+                                <a href="#"><img src="images/detail.jpg"></a>
                             </div>
                             <div class="mui-slider-item">
-                                <a href="#"><img src="images/detail.jpg" /></a>
+                                <a href="#"><img src="images/detail.jpg"></a>
                             </div>
                             <!--支持循环，需要重复图片节点-->
-                            <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/detail.jpg"
-                                    /></a></div>
+                            <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/detail.jpg"></a></div>
                         </div>
                         <!-- 轮播图的小圆点容器 类似于swiper-pagination -->
                         <div class="mui-slider-indicator">
@@ -77,15 +75,24 @@
                             <del>￥999</del>
                         </li>
                         <li class="mui-table-view-cell product-size">
-                                <button type="button" class="btn-size">37</button>
-                                <button type="button" class="btn-size">37</button>
-                                <button type="button" class="btn-size">37</button>
-                                <button type="button" class="btn-size">37</button>
-                                <button type="button" class="btn-size">37</button>
-                                <button type="button" class="btn-size">37</button>
-                                <button type="button" class="btn-size">37</button>
-                                <button type="button" class="btn-size">37</button>
-                                <button type="button" class="btn-size">37</button>
+                            <button type="button" class="btn-size">37</button>
+                            <button type="button" class="btn-size">37</button>
+                            <button type="button" class="btn-size">37</button>
+                            <button type="button" class="btn-size">37</button>
+                            <button type="button" class="btn-size">37</button>
+                            <button type="button" class="btn-size">37</button>
+                            <button type="button" class="btn-size">37</button>
+                            <button type="button" class="btn-size">37</button>
+                            <button type="button" class="btn-size">37</button>
+                        </li>
+                        <li class="mui-table-view-cell product-num">
+                            数量：
+                            <div class="mui-numbox" data-numbox-step='10' data-numbox-min='0' data-numbox-max='100'>
+                                <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                                <input class="mui-numbox-input" type="number" />
+                                <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+                            </div>
+                            剩余：<span>20</span>件
                         </li>
                     </ul>
 
@@ -98,20 +105,71 @@
         <ul>
             <li>
                 <a href="index.html" class="fa fa-shopping-cart">
-                    
+
                 </a>
             </li>
             <li>
-                <button type="button" class="mui-btn mui-btn-danger">加入购物车</button>
+                <button type="button" class="mui-btn mui-btn-danger btn-buycar">加入购物车</button>
             </li>
             <li>
-                <button type="button"  class="mui-btn mui-btn-warning">立即购买</button>
+                <button type="button" class="mui-btn mui-btn-warning">立即购买</button>
             </li>
-            
+
         </ul>
     </footer>
 
-
+    <script type="text/html" id="slidTpl">
+        <section id="slid">
+            <div class="mui-slider">
+                <div class="mui-slider-group mui-slider-loop">
+                    <!--支持循环，需要重复图片节点-->
+                    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{pic[pic.length-1].picAddr}}"></a></div>
+                    {{each pic value}}
+                    <div class="mui-slider-item">
+                        <a href="#"><img src="{{value.picAddr}}"></a>
+                    </div>
+                    {{/each}}
+                    <!--支持循环，需要重复图片节点-->
+                    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{pic[0].picAddr}}"></a></div>
+                </div>
+                <!-- 轮播图的小圆点容器 类似于swiper-pagination -->
+                <div class="mui-slider-indicator">
+                    {{each pic value index}}
+                    <div class="mui-indicator {{index==0?'mui-active':''}}"></div>
+                    {{/each}}
+                </div>
+            </div>
+        </section>
+        <section id="product">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell product-name">
+                    名称：
+                    <strong>
+                        {{proName}}
+                    </strong>
+                </li>
+                <li class="mui-table-view-cell product-price">
+                    价格：
+                    <span>￥{{price}}</span>
+                    <del>￥{{oldPrice}}</del>
+                </li>
+                <li class="mui-table-view-cell product-size">
+                    尺码：{{each size value}}
+                    <button type="button" class="btn-size" data-id="{{value}}">{{value}}</button>
+                    {{/each}}
+                </li>
+                <li class="mui-table-view-cell product-num">
+                    数量：
+                    <div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='{{num}}'>
+                        <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                        <input class="mui-numbox-input" type="number" />
+                        <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+                    </div>
+                    剩余：<span>{{num}}</span>件
+                </li>
+            </ul>
+        </section>
+    </script>
 
 
 
